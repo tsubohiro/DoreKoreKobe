@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>よーし。ドラッグさせちゃうぞ</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script src="css/bootstrap.min.css"></script>
+<script src="css/bootstrap-theme.min"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+<style>
+#div1{
+	width: 150px;
+	height: 150px;
+	background:red;
+}
+#hogeDrag{
+    width: 150px;
+	height: 150px;
+	background:white;
+}
+</style>
+
+<script>
+jQuery(function() {
+
+jQuery("#hogeDrag").draggable({
+connectToSortable: "#div1"
+});
+
+jQuery("#div1").sortable({
+});
+
+});
+</script>
+</head>
+<body>
+<div id="hogeDrag" class="ui-draggable ui-draggable-handle"style="position: relative">
+DIVだよー
+</div>
+
+<div id="div1" class="ui-draggable ui-draggable-handle" style="position: relative">
+DIVですね
+</div>
+</body></html>
