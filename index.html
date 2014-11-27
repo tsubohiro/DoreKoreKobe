@@ -1,46 +1,165 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>よーし。ドラッグさせちゃうぞ</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
-<script src="css/bootstrap.min.css"></script>
-<script src="css/bootstrap-theme.min"></script>
-<script src="js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>4 Col Portfolio - Start Bootstrap Template</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/4-col-portfolio.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 <style>
 #div1{
-	width: 150px;
-	height: 150px;
-	background:red;
+    background:rgba(0,0,255,0.5);
+    height: 80px;
+    width: 80px;
 }
-#hogeDrag{
-    width: 150px;
-	height: 150px;
-	background:white;
+
+#div2{
+    background:rgba(0,0,255,0.5);
+    height: 80px;
+    width: 80px;
 }
 </style>
 
 <script>
-jQuery(function() {
+$(function() {
 
-jQuery("#hogeDrag").draggable({
-connectToSortable: "#div1"
+	$(".hito").draggable({
+	connectToSortable: ".hako1,.hako2",
+	revert: "invalid"
+	});
+
+	$(".hako1").sortable({
+	});
+
+	$(".hako2").sortable({
+	});
+
 });
 
-jQuery("#div1").sortable({
-});
 
-});
 </script>
 </head>
-<body>
-<div id="hogeDrag" class="ui-draggable ui-draggable-handle"style="position: relative">
-DIVだよー
-</div>
 
-<div id="div1" class="ui-draggable ui-draggable-handle" style="position: relative">
-DIVですね
-</div>
-</body></html>
+<body>
+    <!-- Page Content -->
+	<div id="container">
+	 
+	        <!-- Projects Row -->
+	        <div class="row">
+	            <div class="col-xs-2">
+	            </div>
+	            
+	            <div class="ui-draggable ui-draggable-handle col-xs-3">
+	                    <img class="img-responsive hito" src="img/onna_1.png" alt="">
+	            </div>
+	            
+	            <div class="col-xs-1">
+	            </div>
+	            
+	            <div  class="ui-draggable ui-draggable-handle col-xs-3">
+	                    <img class="img-responsive hito" src="img/onna_2.png" alt="">
+	            </div>
+	            
+	            <div class="col-xs-2">
+	            </div>
+	            
+	        </div>
+	        <!-- /.row -->
+
+	         <!-- Projects Row -->
+	        <div class="row">
+	            <div class="col-xs-2">
+	            </div>
+	            
+	            <div id="hogeDrag3" class="ui-draggable ui-draggable-handle col-xs-3">
+	                    <img class="img-responsive hito" src="img/onna_3.png" alt="">
+	            </div>
+	            
+	            <div class="col-xs-1">
+	            </div>
+	            
+	            <div id="hogeDrag4" class="ui-draggable ui-draggable-handle col-xs-3">
+	                    <img class="img-responsive hito" src="img/onna_4.png" alt="">
+	            </div>
+	            
+	            <div class="col-xs-2">
+	            </div>
+	            
+	        </div>
+	        <!-- /.row -->
+
+	        <!-- Projects Row -->
+	        <div class="row">
+	            <div class="col-xs-2">
+	            </div>
+	            
+	            <div id="hogeDrag5" class="ui-draggable ui-draggable-handle col-xs-3">
+	                    <img class="img-responsive hito" src="img/onna_5.png" alt="">
+	            </div>
+	            
+	            <div class="col-xs-1">
+	            </div>
+	            
+	            <div id="hogeDrag6" class="ui-draggable ui-draggable-handle col-xs-3">
+	                    <img class="img-responsive hito" src="img/onna_6.png" alt="">
+	            </div>
+	            
+	            <div class="col-xs-2">
+	            </div>
+	            
+	        </div>
+	        <!-- /.row -->
+
+	        <!-- Projects Row -->
+	        <div class="row">
+	            <div class="col-xs-2">
+	            </div>
+	            
+	            <div id="div1" class="ui-draggable ui-draggable-handle col-xs-3 hako1">
+	            あなた
+	            </div>
+	            
+	            <div class="col-xs-1">
+	            </div>
+	            
+	            <div id="div2" class="ui-draggable ui-draggable-handle col-xs-3 hako2">
+	            あいて
+	            </div>
+	            
+	            <div class="col-xs-2">
+	            </div>
+	            
+	        </div>
+	        <!-- /.row -->
+	</div>
+        <!-- Footer -->
+    <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; NAKATA-TTT 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+</body>
+</html>
