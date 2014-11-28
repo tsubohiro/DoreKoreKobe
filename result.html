@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
-
+<div id="bg">
+	<img class="bg"src="img/bg.JPG" alt=""/>
+</div>
 <head>
 
     <meta charset="utf-8">
@@ -58,6 +60,24 @@ p{
 	background:rgba(255,255,255,0.7);    
 	border-radius: 4px;
 }
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -52%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 52%;
+  min-height: 50%;
+}
+
 </style>
 
 <script>
